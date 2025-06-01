@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Aisha!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right top, #ffe29f, #ffa99f);
+      font-family: 'Open Sans', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: auto;
+    }
+
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      text-align: center;
+      max-width: 600px;
+      animation: fadeIn 1s ease-in-out;
+      margin: 20px;
+    }
+
+    .card h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 3em;
+      color: #ff6f61;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 1.2em;
+      color: #444;
+    }
+
+    .slideshow-container {
+      position: relative;
+      max-width: 500px;
+      margin: 20px auto;
+    }
+
+    .slides {
+      display: none;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      width: 100%;
+      height: auto;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .confetti {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif') center/cover no-repeat;
+      z-index: -1;
+      opacity: 0.2;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="confetti"></div>
+  <div class="card">
+    <h1>Happy Birthday Aisha!</h1>
+    <p>Wishing you all the joy, love, and cake in the world. Have an amazing year ahead, Aisha Lardizabal! 🎉🎂</p>
+
+    <div class="slideshow-container">
+      <img class="slides active" src="https://cdn.discordapp.com/attachments/1371814911155634246/1378631721020559390/IMG_20250427_221655_872.jpg?ex=683d4e58&is=683bfcd8&hm=63d67b562f198f72ce3434f03c1b516c6365dbd82f0a442219c3565dafc95bbc&" alt="Aisha 1">
+      <img class="slides" src="https://cdn.discordapp.com/attachments/1371814911155634246/1378631720617775144/IMG_20250427_223925_697.jpg?ex=683d4e57&is=683bfcd7&hm=1370b4958a349533bd2e6ac6118f253b917b7e5cd4bd025fe0912d4265f89635&" alt="Aisha 2">
+      <img class="slides" src="https://cdn.discordapp.com/attachments/1371814911155634246/1378631720122843136/IMG_20250428_073533_862.jpg?ex=683d4e57&is=683bfcd7&hm=84764668db08265733290accfe4acc2d47f5a3307304e73424bbd71d602cc86d&" alt="Aisha 3">
+      <img class="slides" src="https://cdn.discordapp.com/attachments/1371814911155634246/1378631721687191605/IMG_20250402_211847_262.jpg?ex=683d4e58&is=683bfcd8&hm=b74fc832c24e1bf6c49c3dace51010d43d528f7e23e2cb984b9103bb243650e1&" alt="Aisha 4">
+      <img class="slides" src="https://cdn.discordapp.com/attachments/1371814911155634246/1378631719418335384/IMG_20250531_154752_270.jpg?ex=683d4e57&is=683bfcd7&hm=e119f94fae46c6566e905ad986e765fb42c19073f97965f4356ed3f0788daf50&" alt="Aisha 5">
+    </div>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slides");
+
+    function showSlides() {
+      slides.forEach(slide => slide.classList.remove("active"));
+      slideIndex = (slideIndex + 1) % slides.length;
+      slides[slideIndex].classList.add("active");
+    }
+
+    setInterval(showSlides, 2500); // Change image every 2.5 seconds
+  </script>
+</body>
+</html>
